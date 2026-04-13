@@ -1,0 +1,542 @@
+/* Isso faz com que o padding e a borda não aumentem o tamanho total dos elementos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    padding-top:100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-secao{
+    font-size: 3rem; /* 48px */
+    font-weight: 700;
+    text-align: center;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 20px;
+}
+
+.subtitulo-secao{
+    font-size: 1.25rem; /* 20px */
+    color: #D96523; /* Laranja suave */
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn-inicial{
+    display: inline-block;
+    padding: 18px 45px;
+    background-color: #F25C05; /* Laranja vibrante */
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 4px; /* Levemente arredondado */
+    text-transform: none;
+}
+
+.btn-inicial:hover {
+    background-color: #D96523; /* Laranja suave no hover */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #F25C05; /* Laranja vibrante */
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #D96523; /* Laranja suave no hover */
+}
+
+.btn-enviar {
+    display: inline-block;
+    padding: 10px 25px; /* Tamanho reduzido para um botão pequeno */
+    background-color: #F25C05; /* Laranja vibrante */
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem; /* Fonte um pouco menor */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Garante que ele fique pequeno, se ajustando ao texto */
+}
+
+.btn-enviar:hover {
+    background-color: #D96523; /* Laranja suave no hover */
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #592B02;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* opcional, mas bonito */
+}
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.25rem; /* 20px */
+    color: #ffffff;
+}
+
+.logo-imagem {
+    color: #d50000; /* Vermelho */
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+}
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+nav a:active{
+    color:#F25C05; /* Laranja vibrante */
+}
+nav a:hover{
+    color:#F2C094; /* Bege claro no hover */
+}
+
+#home {
+    position: relative;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBZWYdRU30v4GYqgLPuooKMPtMFcC5oHrKug&s); 
+    background-color: rgba(89, 43, 2, 0.7);
+    background-blend-mode: overlay; 
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 120px 0;
+    text-align: left;
+}
+
+#home h2 {
+    font-size: 4rem; /* 64px */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+#home p {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 40px;
+}
+#sobre{
+    padding:100px 0;
+}
+
+.grade-sobre{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.card-sobre {
+    text-align: center;
+}
+
+.icone-sobre{
+    color: #F25C05; /* Laranja vibrante */
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card-sobre h3 {
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 15px;
+}
+
+.card-sobre p {
+    font-size: 1rem;
+    color: #592B02; /* Marrom escuro */
+}
+
+.grade-status{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card-status{
+    background-color: #F2F2F2; /* Fundo off-white */
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #F2C094; /* Borda bege claro */
+}
+.numero{
+    font-size: 4rem; /* 64px */
+    font-weight: 700;
+    color: #F25C05; /* Laranja vibrante */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.texto{
+    font-size: 1rem;
+    color: #D96523; /* Laranja suave */
+}
+#adocao{
+    padding: 100px 0 60px 0;
+    background-color: #F2F2F2; /* Fundo off-white */
+}
+.grade-animal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-animal{
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #F2C094; /* Borda bege claro */
+    overflow: hidden;
+}
+
+.card-animal:hover .animal-imagem img {
+    transform: scale(1.1);
+}
+.animal-imagem {
+    background-color: #F2C094; /* Bege claro - Espaço reservado para foto */
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #592B02; /* Marrom escuro */
+}
+.animal-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.animal-detalhes {
+    padding: 25px;
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+.animal-detalhes h3 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 700;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 5px;
+}
+
+.animal-dados {
+    font-size: 0.875rem; /* 14px */
+    color: #D96523; /* Laranja suave */
+    margin-bottom: 10px;
+}
+
+.animal-desc {
+    font-size: 0.875rem; /* 14px */
+    color: #592B02; /* Marrom escuro */
+    margin-bottom:20px;
+}
+
+.adocao-clicaveis {
+    padding: 0 0 100px 0;
+    background-color: #F2F2F2; /* Fundo off-white */
+}
+
+.adocao-clicaveis .animal-desc {
+    margin-bottom: 20px;
+}
+
+#noticias {
+    padding: 100px 0;
+}
+
+.grade-noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-noticia {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #F2C094; /* Borda bege claro */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-noticia:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.foto-noticia {
+    background-color: #F2C094; /* Bege claro - Espaço reservado para foto */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #592B02; /* Marrom escuro */
+    object-fit: cover;
+}
+.foto-noticia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detalhes-noticia {
+    padding: 25px;
+}
+
+.data-noticia {
+    font-size: 13px;
+    color: #D96523; /* Laranja suave */
+    margin-bottom: 10px;
+}
+
+.detalhes-noticia h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 15px;
+}
+
+.resumo-noticia {
+    font-size: 14px;
+    color: #592B02; /* Marrom escuro */
+}
+
+#servicos{
+    padding: 100px 0;
+    background-color: #F2F2F2; /* Fundo off-white */
+}
+
+.grade-servico{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card-servico {
+    background-color: #ffffff;
+    padding: 50px 30px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #F2C094; /* Borda bege claro */
+}
+
+.icone-servico {
+    color: #F25C05; /* Laranja vibrante */
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.card-servico h3 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 10px;
+}
+
+.card-servico p {
+    font-size: 0.875rem; /* 14px */
+    color: #592B02; /* Marrom escuro */
+}
+
+/* --- SEÇÃO CONTATO (image_6.png) --- */
+#contato {
+    padding: 100px 0;
+}
+
+.grade-contato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: start;
+}
+
+.info h3,
+.formulario-contato h3 {
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 30px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.icone {
+    color: #F25C05; /* Laranja vibrante */
+    font-size: 1rem;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.item-contato p strong {
+    font-weight: 600;
+    display: block;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 5px;
+}
+
+.item-contato p {
+    font-size: 1rem;
+    color: #592B02; /* Marrom escuro */
+}
+
+.horarios h3 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.horarios p {
+    font-size: 1rem;
+    color: #592B02; /* Marrom escuro */
+}
+
+.formulario-contato .form-group {
+    margin-bottom: 25px;
+}
+
+.formulario-contato label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #592B02; /* Marrom escuro */
+    margin-bottom: 8px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #F2C094; /* Borda bege claro */
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+    color: #D96523; /* Laranja suave */
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* =========================
+   RESPONSIVIDADE FINAL
+========================= */
+
+@media (max-width: 1024px) {
+    .grade-animal,
+    .grade-servico,
+    .grade-noticias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grade-contato {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 🔹 grids viram 1 coluna */
+    .grade-animal,
+    .grade-servico,
+    .grade-noticias,
+    .grade-status,
+    .grade-sobre {
+        grid-template-columns: 1fr;
+    }
+
+    /* 🔹 header: logo em cima */
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* MENU estilo barra de app embaixo */
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #592B02;
+        display: flex;
+        justify-content: space-around;
+        padding: 12px 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        font-size: 12px;
+        color: white;
+        text-align: center;
+    }
+
+    /* 🔹 evita conteúdo ficar escondido atrás do menu */
+    body {
+        padding-bottom: 70px;
+    }
+
+    /* 🔹 títulos menores no celular */
+    #home h2 {
+        font-size: 2.2rem;
+    }
+
+    /* 🔹 leve respiro nos cards */
+    .card-animal {
+        margin: 0 10px;
+    }
+}
